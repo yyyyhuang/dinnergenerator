@@ -26,7 +26,7 @@ def web_page():
                 return '''
                                     <html>
                                         <body>
-                                            <p>Your Dinner iss {meal}</p>
+                                            <p>Your Dinner is {meal}</p>
                                             <p>The calories of the meal is {calorie}</p>
                                             <p>Here is the link of the recipe {recipe}</p>
                                             <p><a href="/">Click here to generate again</a>
