@@ -59,7 +59,7 @@ def output(meal):
     return calories, recipe
 
 
-def index(limit, protein):
+def main(limit, protein):
     # random dish when no calories limit
     if limit < 0:
         if protein < 0:

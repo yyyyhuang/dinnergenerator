@@ -1,11 +1,11 @@
-from flask import Flask, request
-from process import index
+from flask import Flask, request, render_template
+from process import main
 
 app = Flask(__name__)
 
 
 @app.route("/", methods=["GET", "POST"])
-def web_page():
+def index():
     errors = ""
     if request.method == "POST":
         limit = None
@@ -20,35 +20,14 @@ def web_page():
             errors += "<p>protein needs to be one of .</p>\n".format(request.form["protein"])
         if limit is not None and protein is not None:
             try:
-                meal, calorie, recipe = index(limit, protein)
+                meal, calorie, recipe = main(limit, protein)
                 if meal is None:
                     raise TypeError
-                return '''
-                                    <html>
-                                        <body>
-                                            <p>Your Dinner is {meal}</p>
-                                            <p>The calories of the meal is {calorie}</p>
-                                            <p>Here is the link of the recipe {recipe}</p>
-                                            <p><a href="/">Click here to generate again</a>
-                                        </body>
-                                    </html>
-                             '''.format(meal=meal, calorie=calorie, recipe=recipe)
+                return render_template("result.html", meal=meal, calorie=calorie, recipe=recipe)
             except TypeError:
                 errors += "<p>higher limit</p>\n".format(request.form["limit"])
 
-    return '''
-            <html>
-                <body>
-                    {errors}
-                    <p>1: Beef\n2: Pork\n3: Chicken\n4: Seafood</p>
-                    <form method="post" action=".">
-                        <p>Calorie Limit: <input name="limit" /></p>
-                        <p>Protein Number:<input name="protein" /></p>
-                        <p><input type="submit" value="Generate Dinner" /></p>
-                    </form>
-                </body>
-            </html>
-        '''.format(errors=errors)
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
