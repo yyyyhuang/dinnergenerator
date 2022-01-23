@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <title>Result</title>
 </head>
 <body>
-    <div>
-        <p>Your Dinner is {meal}</p>
-        <p>The calories of the meal is {calorie}</p>
-        <p>Here is the link of the recipe {recipe}</p>
+     <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Dinner Generator</a>
+            </div>
+        </div>
+    </nav>
+    <div class="Message">
+        <div class="row">Your Dinner is {{ meal }}</div>
+        <div class="row">The calories of the meal is {{ calorie }}</div>
+        <div class="row">Here is the link of the recipe {{ recipe }}</div>
         <p><a href="/">Click here to generate again</a>
     </div>
 </body>

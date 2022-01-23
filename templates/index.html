@@ -2,22 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
     <title>Dinner Generator</title>
 </head>
+
 <body>
-    <div>
-        <h4>Please enter your calorie limit. Enter any negative number if
-            you don't have one</h4>
-        <h4>Choose protein type from the following menu. Enter any negative
-            number if you don't have a preference</h4>
-        <p>1: Beef 2: Pork 3: Chicken 4: Seafood</p>
-    </div>
-    <div>
-        <form method="post" action=".">
-            <p>Calorie Limit: <input name="limit" /></p>
-            <p>Protein Number:<input name="protein" /></p>
-            <p><input type="submit" value="Generate Dinner" /></p>
-        </form>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Dinner Generator</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="message">
+            <h4> {{ errors }} </h4>
+        </div>
+        <div class="row">
+            Please enter your calorie limit. Enter any negative number if
+            you don't have one
+        </div>
+        <div class="row">
+            Choose protein type from the following menu. Enter any negative
+            number if you don't have a preference
+        </div>
+        <div class="row">1: Beef 2: Pork 3: Chicken 4: Seafood</div>
+
+        <div class="row">
+            <form method="post" action=".">
+                <textarea class="form-control" name="limit" placeholder="Enter Calorie Limit"></textarea>
+                <textarea class="form-control" name="protein" placeholder="Protein Number"></textarea>
+                <input type="submit" class="btn btn-success" value="Generate Dinner">
+            </form>
+        </div>
     </div>
 </body>
 </html>
