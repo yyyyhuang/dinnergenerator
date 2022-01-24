@@ -4,7 +4,7 @@ body {
 
 h1 {
     padding-top: 1em;
-    color: #EA5463;
+    color: #ff84ad;
 }
 
 .row {
@@ -15,7 +15,7 @@ h1 {
 #form-box {
     box-sizing: border-box;
     margin: 2rem 0;
-    background: #84adff;
+    background: #9984ff;
     padding: 2rem;
     border-radius: 10px;
 }
