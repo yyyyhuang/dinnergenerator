@@ -1,0 +1,23 @@
+body {
+    background: rgb(242,221,176);
+}
+
+h1 {
+    padding-top: 1em;
+    color: #EA5463;
+}
+
+.row {
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+#form-box {
+    box-sizing: border-box;
+    margin: 2rem 0;
+    background: #FFAFB8;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+

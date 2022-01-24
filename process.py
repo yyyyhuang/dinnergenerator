@@ -65,20 +65,20 @@ def main(limit, protein):
         if protein < 0:
             meal = np.random.choice(df['dish'].values)
             return meal
-        elif protein == '1':
+        elif protein == 1:
             meal = np.random.choice(beef['dish'].values)
             return meal
-        elif protein == '2':
+        elif protein == 2:
             meal = np.random.choice(pork['dish'].values)
             return meal
-        elif protein == '3':
+        elif protein == 3:
             meal = np.random.choice(chicken['dish'].values)
             return meal
         else:
             meal = np.random.choice(seafood['dish'].values)
             return meal
     else:
-        if protein == '1':
+        if protein == 1:
             beef_dish = filter_limit(limit, 'beef')
             if len(beef_dish) == 0:
                 return None
@@ -86,7 +86,7 @@ def main(limit, protein):
                 meal = np.random.choice(beef_dish['dish'].values)
                 calorie, recipe = output(meal)
                 return meal, calorie, recipe
-        elif protein == '2':
+        elif protein == 2:
             pork_dish = filter_limit(limit, 'pork')
             if len(pork_dish) == 0:
                 return None
@@ -94,7 +94,7 @@ def main(limit, protein):
                 meal = np.random.choice(pork_dish['dish'].values)
                 calorie, recipe = output(meal)
                 return meal, calorie, recipe
-        elif protein == '3':
+        elif protein == 3:
             chicken_dish = filter_limit(limit, 'chicken')
             if len(chicken_dish) == 0:
                 return None
