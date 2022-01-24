@@ -1,5 +1,5 @@
 body {
-    background: rgb(242,221,176);
+    background-color: #ffd684;
 }
 
 h1 {
@@ -15,7 +15,7 @@ h1 {
 #form-box {
     box-sizing: border-box;
     margin: 2rem 0;
-    background: #FFAFB8;
+    background: #84adff;
     padding: 2rem;
     border-radius: 10px;
 }
